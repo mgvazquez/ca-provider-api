@@ -1,0 +1,26 @@
+---
+version: "3.8"
+
+services:
+  ca-provisioner:
+    build:
+      context: .
+      args:
+        VERSION: ${STEP_CA_VERSION:-0.15.15}
+    restart: always
+    tty: true
+    stdin_open: true
+    ports:
+      - "443:443"
+    environment:
+      CI_DEBUG_TRACE: "False"
+      CA_PROVIDER_LONG_NAME: "Dummy Ltd."
+      CA_PROVIDER_SHORT_NAME: "Dummy"
+      CA_PROVIDER_URL: "localhost"
+      CA_PROVIDER_MAIL: "dummy@localhost.com"
+      ROOT_CA_DUMMY: "true"
+    volumes:
+      - ${PWD}/extras/entrypoint.sh:/app/entrypoint.sh
+      - ${PWD}/extras/logger.sh:/app/logger.sh
+      - ${PWD}/step-home:/home/step
+      - ${PWD}/ca-files:/certs

@@ -1,0 +1,9 @@
+.idea
+.env
+.ignore
+ca-files/**/*
+.certificates/**/*
+!ca-files/.gitkeep
+!ca-files/README.md
+step-home/**/*
+!step-home/.gitkeep
