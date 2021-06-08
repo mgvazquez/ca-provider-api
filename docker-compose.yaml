@@ -2,7 +2,7 @@
 version: "3.8"
 
 services:
-  ca-provisioner:
+  ca-provider:
     image: mgvazquez/ca-provider-api:${STEP_CA_VERSION:-0.15.15}
     restart: always
     tty: true
@@ -11,7 +11,7 @@ services:
       - "443:443"
     environment:
       CI_DEBUG_TRACE: "${CI_DEBUG_TRACE:-False}"
-      CA_PROVIDER_LONG_NAME: "${CA_PROVIDER_LONG_NAME:-'Scabb Island'}"
+      CA_PROVIDER_LONG_NAME: "${CA_PROVIDER_LONG_NAME:-'Scabb Island Ltd.'}"
       CA_PROVIDER_SHORT_NAME: "${CA_PROVIDER_SHORT_NAME:-scbbi}"
       CA_PROVIDER_URL: "${CA_PROVIDER_URL:-ca.scabb-island.com.ar}"
       CA_PROVIDER_MAIL: "${CA_PROVIDER_MAIL:-'acme@scabb-island.com.ar'}"

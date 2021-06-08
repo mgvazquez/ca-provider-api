@@ -1,5 +1,5 @@
 ARG VERSION=0.15.15
-FROM docker.scm.primary/smallstep/step-ca:${VERSION}
+FROM smallstep/step-ca:${VERSION}
 
 USER root
 WORKDIR /home/step
@@ -13,8 +13,7 @@ ENV STEP=/home/step \
 
 RUN apk add --no-cache \
         jq \
-        openssl \
-        expect
+        openssl
 
 RUN chmod a+x /app/entrypoint.sh
 
@@ -30,11 +29,11 @@ ARG BUILD_VERSION
 ARG BUILD_PROJECT_URL
 ARG BUILD_COMMITER_NAME
 ARG BUILD_COMMITER_MAIL
-LABEL ar.com.matbarofex.ca-provisioner.maintainer="ISBA DevOps <devops@primary.com.ar>" \
-      ar.com.matbarofex.ca-provisioner.license=GPL-3.0 \
-      ar.com.matbarofex.ca-provisioner.build-date=${BUILD_DATE} \
-      ar.com.matbarofex.ca-provisioner.vcs.url="${BUILD_PROJECT_URL}" \
-      ar.com.matbarofex.ca-provisioner.vcs.ref.sha=${BUILD_VCS_REF} \
-      ar.com.matbarofex.ca-provisioner.vcs.ref.name=${BUILD_VERSION} \
-      ar.com.matbarofex.ca-provisioner.vcs.commiter="${BUILD_COMMITER_NAME} <${BUILD_COMMITER_MAIL}>"
+LABEL ar.com.scabb-island.ca-provider-api.maintainer="Manuel Andres Garcia Vazquez <mvazquez@scabb-island.com.ar>" \
+      ar.com.scabb-island.ca-provider-api.license=GPL-3.0 \
+      ar.com.scabb-island.ca-provider-api.build-date=${BUILD_DATE} \
+      ar.com.scabb-island.ca-provider-api.vcs.url="${BUILD_PROJECT_URL}" \
+      ar.com.scabb-island.ca-provider-api.vcs.ref.sha=${BUILD_VCS_REF} \
+      ar.com.scabb-island.ca-provider-api.vcs.ref.name=${BUILD_VERSION} \
+      ar.com.scabb-island.ca-provider-api.vcs.commiter="${BUILD_COMMITER_NAME} <${BUILD_COMMITER_MAIL}>"
 ##################################################

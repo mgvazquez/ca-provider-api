@@ -174,20 +174,22 @@ para que _Google Chrome_ confíe en los certificados emitidos por el mismo.
 Para esto, lo primero que debemos hacer es acceder a la siguiente _URL_, [`chrome://settings/certificates`](chrome://settings/certificates),
 desde el mismo _Google Chrome_; y una vez allí, seleccionar el _tab_ de **Authorities**
 
-<div><p align="center" valign="middle">![Chrome Authorities](assets/chrome_authorities.png)</p></div>
+![Chrome Authorities](assets/chrome_authorities.png)
 
 Luego hacemos _click_ en el botón **import**, y seleccionamos el archivo del _certificado intermedio_ que resguardamos
 anteriormente.
 
-<div><p align="center" valign="middle">![Chrome Cert Import](assets/chrome_import.png)</p></div>
+![Chrome Cert Import](assets/chrome_import.png)
 
 Después, indicamos que este certificado solo será _confiable_ para certificados para Sitios Web
 
-<div><p align="center" valign="middle">![Chrome CA Check](assets/chrome_ca_check.png)</p></div>
+![Chrome CA Check](assets/chrome_ca_check.png)</p></div>
 
 Y por último confirmamos que la nueva _Certificate Authority_ fue importada correctamente.
 
-<div><p align="center" valign="middle">![Chrome Certificated Imported](assets/chrome_cert_imp.png)</p></div>
+![Chrome Certificated Imported](assets/chrome_cert_imp.png)
+
+![Chrome Certificated Imported](assets/chrome_cert_imp-bis.png)
 
 ### Sistemas Operativos
 
